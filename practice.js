@@ -91,7 +91,7 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
 //Code Here
 function evenFinder(nums) {
-  var evens = nums.filter(elem => elem % 2 === 0)
+  var evens = nums.filter(elem => !(elem % 2))
   return evens;
 }
 
@@ -111,7 +111,15 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
+function divider(numbersArray) {
+  var overallArr = [[], []];
+  var evens = numbersArray.filter(elem => !(elem % 2));
+  var odds = numbersArray.filter(elem =>  (elem % 2));
+  overallArr[0] = evens;
+  overallArr[1] = odds;
+  return overallArr;
 
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -132,6 +140,15 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+function finder(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (getRandomArbitrary() === arr[i]) {
+      return true;
+    }
+    
+  }
+      return false;
+}
 
 
 
