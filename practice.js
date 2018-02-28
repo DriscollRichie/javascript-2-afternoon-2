@@ -279,7 +279,20 @@ function longer(arr1, arr2) {
 */
 
 //Code Here
+function both(arr1, arr2) {
+  console.log(arr1);
+  console.log(arr2);
+  var sameArr = [];
 
+  arr1.forEach( val => {
+    var index = arr2.indexOf( val );
+    if ( index !== -1 ) {
+      sameArr.push( val );
+    }
+  });
+
+  return sameArr;
+}
 
 
 ////////// PROBLEM 12 //////////
