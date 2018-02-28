@@ -176,7 +176,33 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(myGroceryList, checkedItem) {
+  for (var i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList[i] === checkedItem) {
+      myGroceryList.splice(i, 1);
+    } else if (!checkedItem) {
+      return myGroceryList.splice(0, myGroceryList.length);
+    }
+  }
 
+  return myGroceryList;
+} 
+ 
+function addItem(myGroceryList, neededItem) {
+  console.log(myGroceryList);
+  console.log(neededItem);
+  if ( !neededItem ) {
+    return [];
+  } else {
+    var hasItem = myGroceryList.includes(neededItem);
+    if (hasItem === false) {
+      myGroceryList.push(neededItem);
+    }
+
+    
+    return myGroceryList;
+  }
+}
 
 
 ////////// PROBLEM 9 //////////
@@ -186,7 +212,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
+function maker() {
+  var newArr = []
+  for (var i = 1; i <= 215; i++) {
+    newArr.push(i);
+  }
+  return newArr;
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -202,7 +234,9 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-
+function addTen(numbers) {
+  return numbers.map(elem => parseInt(elem) + 10);
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -227,7 +261,13 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function longer(arr1, arr2) {
+  if (arr1 > arr2) {
+    return arr1;
+  }
+  return arr2;
+  
+}
 
 
 /*
